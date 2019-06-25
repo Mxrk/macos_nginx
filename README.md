@@ -20,3 +20,7 @@ or directly call
 ```
 docker run -p 80:80 mxrkw/macos_nginx
 ```
+If you want to run the container in the background:
+```
+docker run -d -p 80:80 mxrkw/macos_nginx
+```
