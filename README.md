@@ -3,12 +3,16 @@
 Basic Dockerfile to create a nginx reverse proxy for MacOS. At the moment I added two routes, 
 you can add more if you want. Simply add a new location, here is a template:
 ```
-location / {
+location /template {
     proxy_set_header Host $http_host;
     proxy_pass http://host.docker.internal:3000/;
     
   }
 ```
+
+# Example use cases
+- Run services on your mac and access them via the reverse proxy.
+- Run multiple webservers on the host machine and access them on the same port. (Can be used to prevent CORS problems).
 
 # How to start the container?
 
